@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "HIFU Facial",
+    "fecha": "2026-05-09",
+    "descripcion": "Lifting sin cirugía con ultrasonido focalizado. Resultados inmediatos y progresivos desde la primera sesión.",
+    "sede": "Parque Chacabuco",
+    "promo": "Turno disponible",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Liposonix",
+    "fecha": "2026-05-12",
+    "descripcion": "Reducción de grasa localizada no invasiva. Sesión individual con evaluación previa incluida.",
+    "sede": "Parque Centenario",
+    "promo": "20% OFF primera sesión",
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "nombre": "Vela Slim",
+    "fecha": "2026-05-15",
+    "descripcion": "Tratamiento anti-celulitis con radiofrecuencia, vacuoterapia e infrarrojo. Pack de 3 sesiones.",
+    "sede": "Parque Chacabuco",
+    "promo": null,
+    "destacado": false
+  },
+  {
+    "id": 4,
+    "nombre": "Microblading de Cejas",
+    "fecha": "2026-05-17",
+    "descripcion": "Diseño de cejas pelo a pelo, resultado ultra natural y duradero hasta 18 meses. Retoque incluido.",
+    "sede": "Parque Centenario",
+    "promo": "Retoque incluido",
+    "destacado": false
+  },
+  {
+    "id": 5,
+    "nombre": "Lifting de Pestañas",
+    "fecha": "2026-05-20",
+    "descripcion": "Curvado y tinte incluido. La mirada más abierta y definida sin máscara, hasta 8 semanas.",
+    "sede": "Parque Chacabuco",
+    "promo": null,
+    "destacado": false
+  }
+]
