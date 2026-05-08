@@ -1,5 +1,6 @@
-const WA_URL =
-  "https://wa.me/5491157659672?text=Hola%20Karina%2C%20quiero%20hacer%20una%20consulta";
+import { WA_LINK_BASE } from "@/lib/constants";
+
+const WA_URL = `${WA_LINK_BASE}?text=Hola%20Karina%2C%20quiero%20hacer%20una%20consulta`;
 
 const zonas = [
   {
@@ -58,7 +59,7 @@ export default function Contact() {
                 <span>Sábados</span>
                 <span>9:00 – 14:00</span>
               </div>
-              <div className="flex justify-between max-w-xs text-calme-border">
+              <div className="flex justify-between max-w-xs text-calme-muted/50">
                 <span>Domingos</span>
                 <span>Cerrado</span>
               </div>

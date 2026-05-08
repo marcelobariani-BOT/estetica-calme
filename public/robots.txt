@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estetica-calme.vercel.app/sitemap.xml

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { WA_LINK_BASE } from "@/lib/constants";
 
-const WA = "https://wa.me/5491157659672";
+const WA = WA_LINK_BASE;
 
 const courses = [
   {
@@ -12,8 +13,8 @@ const courses = [
     includes: ["Teoría y práctica", "Materiales incluidos", "Certificado"],
     wa: `${WA}?text=Hola%20Karina%2C%20quiero%20información%20sobre%20el%20curso%20de%20depilación%20profesional`,
     image: {
-      src: "https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?w=160&h=160&fit=crop&q=80",
-      alt: "Curso de depilación profesional",
+      src: "https://images.unsplash.com/photo-1609840533741-62c180d0be79?w=160&h=160&fit=crop&q=80",
+      alt: "Curso de depilación profesional — aplicación de cera",
     },
   },
   {
@@ -25,8 +26,8 @@ const courses = [
     includes: ["Teoría y práctica", "Kit de inicio", "Certificado"],
     wa: `${WA}?text=Hola%20Karina%2C%20quiero%20información%20sobre%20el%20curso%20de%20lifting%20y%20diseño%20de%20cejas`,
     image: {
-      src: "https://images.unsplash.com/photo-1622336889416-8d790ad807d7?w=160&h=160&fit=crop&q=80",
-      alt: "Curso de lifting y diseño de cejas",
+      src: "https://images.unsplash.com/photo-1567629307995-b9f33097bd30?w=160&h=160&fit=crop&q=80",
+      alt: "Curso de lifting y diseño de cejas — resultado profesional",
     },
   },
   {
@@ -38,8 +39,8 @@ const courses = [
     includes: ["Práctica en maniquí y modelo", "Kit completo", "Certificado"],
     wa: `${WA}?text=Hola%20Karina%2C%20quiero%20información%20sobre%20el%20curso%20de%20extensión%20de%20pestañas`,
     image: {
-      src: "https://images.unsplash.com/photo-1735151226446-1d364b4adc2f?w=160&h=160&fit=crop&q=80",
-      alt: "Curso de extensión de pestañas",
+      src: "https://images.unsplash.com/photo-1735151225764-eac694642dbf?w=160&h=160&fit=crop&q=80",
+      alt: "Curso de extensión de pestañas — técnica pelo a pelo",
     },
   },
 ];

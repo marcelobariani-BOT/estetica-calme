@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { WA_LINK_BASE } from "@/lib/constants";
 
 const links = [
   { href: "#servicios", label: "Servicios" },
@@ -10,11 +11,19 @@ const links = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-const WA_URL =
-  "https://wa.me/5491157659672?text=Hola%20Karina%2C%20quiero%20hacer%20una%20consulta";
+const WA_URL = `${WA_LINK_BASE}?text=Hola%20Karina%2C%20quiero%20hacer%20una%20consulta`;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 bg-calme-cream/90 backdrop-blur-sm border-b border-calme-border">
@@ -55,8 +64,10 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden flex flex-col justify-center gap-1.5 p-2 w-10 h-10"
+          className="lg:hidden flex flex-col justify-center gap-1.5 p-2 w-11 h-11"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           <span
             className={`block w-6 h-px bg-calme-dark transition-all duration-300 origin-center ${open ? "rotate-45 translate-y-[7px]" : ""}`}
@@ -72,6 +83,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
         className={`lg:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-[30rem]" : "max-h-0"}`}
       >
         <div className="border-t border-calme-border bg-calme-cream px-6 py-5 flex flex-col gap-5">
@@ -80,7 +92,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-xs tracking-[0.12em] uppercase text-calme-dark hover:text-calme-terra transition-colors"
+              className="text-xs tracking-[0.12em] uppercase text-calme-dark hover:text-calme-terra transition-colors min-h-[44px] flex items-center"
             >
               {l.label}
             </a>
@@ -90,7 +102,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center justify-center gap-2 bg-calme-terra text-white text-xs tracking-wider px-5 py-3 rounded-full hover:bg-calme-terra-dark transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-calme-terra text-white text-xs tracking-wider px-5 py-3.5 rounded-full hover:bg-calme-terra-dark transition-colors min-h-[44px]"
           >
             Escribinos por WhatsApp
           </a>

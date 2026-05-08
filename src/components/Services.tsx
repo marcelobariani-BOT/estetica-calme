@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { WA_LINK_BASE } from "@/lib/constants";
 
-const WA = "https://wa.me/5491157659672";
+const WA = WA_LINK_BASE;
 
 const services = [
   {

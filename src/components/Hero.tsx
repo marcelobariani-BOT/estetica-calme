@@ -1,3 +1,5 @@
+import { WA_LINK_BASE } from "@/lib/constants";
+
 function BotanicalBranch({ className }: { className?: string }) {
   return (
     <svg
@@ -126,7 +128,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://wa.me/5491157659672?text=Hola%20Karina%2C%20quiero%20consultar%20por%20un%20turno"
+            href={`${WA_LINK_BASE}?text=Hola%20Karina%2C%20quiero%20consultar%20por%20un%20turno`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-calme-terra text-white px-8 py-3.5 rounded-full text-xs tracking-[0.1em] uppercase hover:bg-calme-terra-dark transition-colors duration-200"

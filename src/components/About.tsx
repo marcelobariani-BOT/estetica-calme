@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { WA_LINK_BASE } from "@/lib/constants";
 
 export default function About() {
   return (
@@ -14,6 +15,7 @@ export default function About() {
                 width={560}
                 height={660}
                 className="w-full object-cover"
+                priority
               />
             </div>
             {/* Decorative border */}
@@ -66,7 +68,7 @@ export default function About() {
             </div>
 
             <a
-              href="https://wa.me/5491157659672?text=Hola%20Karina%2C%20me%20gustaría%20conocer%20más%20sobre%20los%20tratamientos"
+              href={`${WA_LINK_BASE}?text=Hola%20Karina%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20tratamientos`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex items-center gap-2 border border-calme-terra text-calme-terra text-xs tracking-wider px-7 py-3.5 rounded-full hover:bg-calme-terra hover:text-white transition-all duration-200"

@@ -1,6 +1,5 @@
 import data from "@/data/proximos-tratamientos.json";
-
-const WA_BASE = "5491157659672";
+import { WA_LINK_BASE } from "@/lib/constants";
 
 const MONTHS: Record<number, string> = {
   1: "Ene", 2: "Feb", 3: "Mar", 4: "Abr", 5: "May", 6: "Jun",
@@ -20,7 +19,7 @@ function makeWaUrl(nombre: string, fecha: string) {
   const text = encodeURIComponent(
     `Hola Karina, quiero reservar un turno de ${nombre} el ${fecha}`
   );
-  return `https://wa.me/${WA_BASE}?text=${text}`;
+  return `${WA_LINK_BASE}?text=${text}`;
 }
 
 const sedeBadge: Record<string, string> = {

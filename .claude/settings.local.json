@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(findstr tailwind *)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebSearch",
+      "Bash(Remove-Item *)"
     ]
   }
 }
